@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Parcelamento de Compra</title>
+</head>
+<body>
+    <h2>Calculadora de Parcelas com Juros</h2>
+    <form onsubmit="calcularParcela(); return false;">
+        <input type="number" id="valorCompra" placeholder="Valor da compra" step="any" required>
+        <input type="number" id="parcelas" placeholder="Quantidade de parcelas" required>
+        <button type="submit">Calcular</button>
+    </form>
+    <textarea id="resultado" rows="3" cols="40" readonly></textarea>
+
+    <script>
+        function calcularValorParcela(valorCompra, quantidadeParcelas) {
+            if (quantidadeParcelas <= 1) {
+                return valorCompra;
+            } else {
+                const valorComJuros = valorCompra * 1.05;
+                return valorComJuros / quantidadeParcelas;
+            }
+        }
+
+        function calcularParcela() {
+            const valorCompra = parseFloat(document.getElementById("valorCompra").value);
+            const parcelas = parseInt(document.getElementById("parcelas").value);
+
+            if (isNaN(valorCompra) || isNaN(parcelas) || valorCompra <= 0 || parcelas <= 0) {
+                document.getElementById("resultado").value = "Digite valores válidos para compra e parcelas.";
+                return;
+            }
+
+            const valorParcela = calcularValorParcela(valorCompra, parcelas);
+
+            document.getElementById("resultado").value = 
+                `Valor total da compra: R$ ${valorCompra.toFixed(2)}\n` +
+                `Quantidade de parcelas: ${parcelas}\n` +
+                `Valor de cada parcela: R$ ${valorParcela.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

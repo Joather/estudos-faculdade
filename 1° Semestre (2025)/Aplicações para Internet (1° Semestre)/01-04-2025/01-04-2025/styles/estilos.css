@@ -1,0 +1,85 @@
+body {
+    font-family: verdana;
+    font-size: 10pt;
+}
+
+table.cal {
+    color: #06425C;
+    border-spacing: 0;
+    border: 3px solid black;
+    border-radius: 0 0 25px 25px;
+}
+
+/*Altera a cor de fundo nas linhas (par e ímpar)*/
+tr:nth-child(odd) { /*ímpar*/
+    background: #daf0fc;
+}
+
+tr:nth-child(even) { /*par*/
+    background: #87d5ff;
+}
+
+tr:last-child>td:first-child {
+    border-radius: 0 0 25px 0;
+}
+
+tr:last-child>td:last-child {
+    border-radius: 0 0 25px 0;
+}
+
+tr>td:first-child , tr>td:last-child {
+    color: #900707;
+}
+
+tr:first-child>td:first-child {
+    color: #b9b8b8;
+}
+
+td:nth-child(even) {
+    border-right: 1px solid #56c4ff;
+    border-left: 1px solid #56c4ff;
+}
+
+.cal caption {
+    text-transform: uppercase;
+    background-color: #2a2a6f;
+    color: #ffffff;
+    border-radius: 25px 25px 0 0;
+}
+
+.cal th, .cal td {
+    margin: 2px;
+    padding-bottom: 2px
+}
+
+th {
+    text-align: center;
+    background: #ffffff;
+}
+
+.cal td {
+    width: 55px;
+    height: 55px;
+    vertical-align: center;
+    text-align: center;
+}
+
+.feriado {
+    background-color: #4d96d3;
+}
+
+.old {
+    background-color: #ced0d0;
+    color: #b9b8b8;
+}
+
+span {
+    display: none;
+    text-align: center;
+    color: #0e15c1;
+    font-size: 7pt;
+}
+
+td:hover>span {
+    display:block;
+}

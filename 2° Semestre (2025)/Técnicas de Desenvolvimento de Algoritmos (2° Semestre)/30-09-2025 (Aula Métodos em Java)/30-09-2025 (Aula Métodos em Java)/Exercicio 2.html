@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Retângulo</title>
+</head>
+<body>
+    <h2>Calculadora de Área do Retângulo</h2>
+    <form onsubmit="calcularArea(); return false;">
+        <input type="number" id="lado1" placeholder="Digite o primeiro lado" step="any" required>
+        <input type="number" id="lado2" placeholder="Digite o segundo lado" step="any" required>
+        <button type="submit">Calcular</button>
+    </form>
+    <textarea id="resultado" rows="3" cols="40" readonly></textarea>
+
+    <script>
+        function calcularAreaRetangulo(lado1, lado2) {
+            return lado1 * lado2;
+        }
+
+        function calcularArea() {
+            const lado1 = parseFloat(document.getElementById("lado1").value);
+            const lado2 = parseFloat(document.getElementById("lado2").value);
+
+            if (isNaN(lado1) || isNaN(lado2) || lado1 <= 0 || lado2 <= 0) {
+                document.getElementById("resultado").value = "Digite valores válidos para os lados.";
+                return;
+            }
+
+            const area = calcularAreaRetangulo(lado1, lado2);
+
+            document.getElementById("resultado").value = `A área do retângulo é ${area.toFixed(2)}.`;
+        }
+    </script>
+</body>
+</html>

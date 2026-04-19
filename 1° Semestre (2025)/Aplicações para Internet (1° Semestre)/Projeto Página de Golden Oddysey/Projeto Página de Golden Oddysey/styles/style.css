@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@300;600&family=Ubuntu&display=swap');
+
+:root {
+    --branco-texto: #FFFFFF;
+    --dourado-texto: #ffc663;
+    --dourado-fundo: #352100B3;
+    --fonte-primaria: 'Ubuntu', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+    --fonte-terciaria: 'Krona One', sans-serif;
+}
+
+body {
+    background-image: url(../assets/cenario.jpg);
+    background-size: cover;
+    background-position: 35% 5%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.conteudo {
+    background-color: var(--dourado-fundo);
+    margin: 1.2em;
+    padding: 1em;
+    padding-right: 2em;
+    padding-bottom: 20%;
+}
+
+.conteudo_texto {
+    color: var(--branco-texto);
+    line-height: 200%;
+    font-family: var(--fonte-primaria);
+}
+
+.conteudo_titulo {
+    font-size: 1.5em;
+    color: var(--branco-texto);
+    padding-bottom: 10%;
+    font-family: var(--fonte-terciaria);
+}
+
+.cabecalho {
+    background-color: var(--dourado-fundo);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.cabecalho_item {
+    color: var(--dourado-texto);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-right: 10px;
+    font-family: var(--fonte-secundaria);
+}
+
+.cabecalho_item:hover {
+    color: azure;
+}
+
+.cabecalho_item:active {
+    color: #ffeec9
+}
+
+.conteudo_texto_link {
+    color: var(--dourado-texto);
+    display: flex;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-right: 5px;
+}
+
+.conteudo_texto_link:hover {
+    color: azure;
+}
+
+.conteudo_texto_link:active {
+    color: #ffeec9
+}
+
+.conteudo_contato {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+    font-size: 1.5em;
+}
+
+.conteudo_link_imagem {
+    height: 1.2em;
+    padding-left: 0px;
+}
+
+.conteudo_aviso {
+    font-size: 5em;
+    color: #FFFFFF;
+    margin-bottom: 1em;
+}
+
+.conteudo_texto_planos {
+    color: #FFFFFF;
+}
+
+.rodape {
+    color: var(--dourado-texto);
+    background-color: var(--dourado-fundo);
+    padding: 1%;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
