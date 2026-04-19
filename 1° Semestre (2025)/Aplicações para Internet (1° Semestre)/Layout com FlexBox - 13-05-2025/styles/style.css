@@ -1,0 +1,66 @@
+/* Estilos gerais do corpo da página */
+body {
+    font-family: sans-serif; /* Define a fonte padrão como sans-serif */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f4f4f4; /* Define a cor de fundo como cinza claro */
+}
+
+/* Contêiner principal */
+.container {
+    display: flex; /* Ativa o contexto flexbox para o contêiner */
+    width: 90%; /* Define a largura do contêiner como 90% da largura da tela */
+    max-width: 1200px; /* Define a largura máxima do contêiner como 1200px */
+    margin: 20px auto; /* Define a margem superior e inferior como 20px e centraliza horizontalmente */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    padding: 15px; /* Define o preenchimento interno como 15px */
+    box-sizing: border-box; /* Inclui o preenchimento e a borda no cálculo da largura e altura */
+}
+
+/* Estilos para as colunas dentro do contêiner */
+.coluna {
+    background-color: #ddd; /* Define a cor de fundo como cinza claro */
+    color: #333; /* Define a cor do texto como cinza escuro */
+    padding: 20px; /* Define o preenchimento interno como 20px */
+    margin: 10px; /* Define a margem externa como 10px */
+    border-radius: 5px; /* Aplica bordas arredondadas com raio de 5px */
+    text-align: justify; /* Justifica o texto dentro da coluna */
+    flex: 1; /* Faz com que todas as colunas cresçam igualmente */
+}
+
+/* Estilos para o primeiro filho das colunas */
+.coluna:first-child {
+    margin-left: 0; /* Remove a margem esquerda do primeiro filho */
+    text-align: justify; /* Garante que o texto esteja justificado */
+}
+
+/* Estilos para o último filho das colunas */
+.coluna:last-child {
+    margin-right: 0; /* Remove a margem direita do último filho */
+    text-align: justify; /* Garante que o texto esteja justificado */
+}
+
+/* Estilos para o cabeçalho e rodapé */
+.header, .footer {
+    background-color: #333; /* Define a cor de fundo como cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 15px; /* Define o preenchimento interno como 15px */
+    text-align: center; /* Centraliza o texto */
+    box-sizing: border-box; /* Inclui o preenchimento e a borda no cálculo da largura e altura */
+}
+
+/* Layout responsivo para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+    }
+    .coluna {
+        margin: 10px 0; /* Define a margem superior e inferior como 10px */
+    }
+    .coluna:first-child {
+        margin-top: 0; /* Remove a margem superior do primeiro filho */
+    }
+    .coluna:last-child {
+        margin-bottom: 0; /* Remove a margem inferior do último filho */
+    }
+}
