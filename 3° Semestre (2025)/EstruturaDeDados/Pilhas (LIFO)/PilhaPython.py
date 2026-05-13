@@ -11,4 +11,6 @@ pilha.append("CR7")
 # PEEK - ver o topo sem remover
 print(pilha[-1])  # [-1] sempre acessa o último elemento
 
-pilha.pop()
+removido = pilha.pop()
+print(f"Removido: {removido}")
+print(f"Fila Atual: {pilha}")

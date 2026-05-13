@@ -13,7 +13,7 @@ public class MenuJogoArrayDeque {
         System.out.println(menuHistorico.peek()); // Mostrar Menu Principal
         System.out.println("// ----------------- //");
 
-        // 3 Botões: Novo Jogo, Continuar, Opções, Cŕeditos
+        // 4 Botões: Novo Jogo, Continuar, Opções, Cŕeditos
 
         // Indo para: Novo Jogo
         System.out.println(menuHistorico.peek());
@@ -79,4 +79,3 @@ public class MenuJogoArrayDeque {
         System.out.println("// ----------------- //");
     }
 }
-z
