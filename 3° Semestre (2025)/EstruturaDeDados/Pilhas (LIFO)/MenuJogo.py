@@ -47,3 +47,34 @@ print(menu_historico[-1])
 print("// ----------------- //")
 
 # Indo para: Opções
+print(menu_historico[-1])
+menu_historico.append(" --> Opções")
+print("Menu Principal" + menu_historico[-1])
+menu_historico.append(" --> Sons")
+print("Menu Principal --> Opções" + menu_historico[-1])
+# Voltando para Menu Principal
+menu_historico.pop()
+print("Menu Principal" + menu_historico[-1])
+menu_historico.pop()
+print(menu_historico[-1])
+
+# Menu Principal
+print("// ----------------- //")
+print(menu_historico[-1])
+print("// ----------------- //")
+
+# Indo para: Créditos:
+print(menu_historico[-1])
+menu_historico.append(" --> Créditos")
+print("Menu Principal" + menu_historico[-1])
+print(
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+)
+# Voltando para Menu Principal
+menu_historico.pop()
+print(menu_historico[-1])
+
+# Menu Principal
+print("// ----------------- //")
+print(menu_historico[-1])
+print("// ----------------- //")
